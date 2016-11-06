@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-var connection = mysql.connection({
+var connection = mysql.createConnection({
     port: 3306,
     host: 'localhost',
     user: 'root',
@@ -15,4 +15,4 @@ connection.connect(function (err) {
     console.log('connected as id ' + connection.threadId);
 })
 
-modules.exports = connection;
+module.exports = connection;
